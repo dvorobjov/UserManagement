@@ -1,0 +1,209 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UM",
+		"_postman_id": "511d4696-42a4-77bd-28ba-98b1ee36e4d9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UM_LOAD",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UM_FIND",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account/find?emailPattern=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"find"
+					],
+					"query": [
+						{
+							"key": "emailPattern",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UM_CREATE",
+			"request": {
+				"url": "http://localhost:8080/account",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "TEST_NAME3",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "surname",
+							"value": "TEST_SURNAME3",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "email",
+							"value": "TEST_NAME3@TEST_EMAIL.COM",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UM_UPDATE",
+			"request": {
+				"url": "http://localhost:8080/account",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW5fcGFzc3dvcmQ=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "name",
+							"value": "UPDATED_NAME",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "surname",
+							"value": "UPDATED_SURNAME",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "email",
+							"value": "UPDATED_EMAIL@EMAIL.COM",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UM_DELETE",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
